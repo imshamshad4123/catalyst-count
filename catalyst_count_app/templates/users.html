@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block users %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-right">
+            <!-- Button in Right Corner -->
+            <a href="{% url 'add_user'%}" class="btn btn-primary mt-3">add user</a>
+        </div>
+    </div>
+</div>
+<!-- <div class="container"> -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Users</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Doe</td>
+                        <td>jane.doe@example.com</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Johny Doe</td>
+                        <td>johny.doe@example.com</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+<!-- </div> -->
+
+
+{% endblock %}

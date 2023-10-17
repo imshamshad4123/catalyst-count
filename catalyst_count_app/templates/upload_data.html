@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block upload_data %}
+<form class="was-validated" style="margin-top: 300px;" enctype="multipart/form-data" method="post" >
+    {% csrf_token %}
+    <div class=""><strong>Upload Data</strong></div>
+
+    <div class="input-group mt-3">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" accept=".csv" required name="filedata"id="inputGroupFile04" value=>
+            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+        </div>
+    </div>
+    <div class="mt-3">
+        <button class="btn btn-primary" type="submit" >Start Upload</button>
+    </div>
+
+    <div class="progress mt-3">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+</form>
+{% endblock %}
